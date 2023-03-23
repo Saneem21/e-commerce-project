@@ -1,0 +1,86 @@
+<!DOCTYPE html 
+
+
+<html>
+<style>
+body{
+background-image:url('4.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: Red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #657383;
+}
+</style>
+
+<a href="cart.php"><input type="submit" name="back" value="BACK"/></a>
+
+<head>
+</head>
+<body>
+<center>
+<h1 font-style="italic">
+Payment
+<h1>
+<table >
+<tr><th>
+<div onClick="window.location = 'checkout.php';">
+    <input type="radio" style="pointer-events:none;" name="form1" id="form1" value="Credit/Debit Card"</th><td><font size="5">Credit/Debit Card</font><br></td></tr>
+</div>
+<tr><th> 
+<div onClick="window.location = 'Upi.php';">               
+     <input type="radio" style="pointer-events:none;" name="form2" id="form2" value="BHIM UPI" /></th><td><font size="5">BHIM UPI<br></font></td></tr>
+</div>
+ 
+<tr><th> 
+<script>
+function myFunction() {
+  alert(" Your Booking is confirmed");
+  window.location="track.html";
+}
+</script>
+<div onClick="window.location = 'cod1.php';">
+<input type="radio" name="form3" id="form4" value="Cash On delivery" /></th><td><font size="5">COD</font><br></td></tr>  </div>
+<br>
+<br>
+
+   
+</div> 
+</table>
+<div onClick="window.location ='track.html'">
+<input type="button" name="b1" class="button"  value="DONE" >
+</div>                           
+</center>
+</body>
+</html>
+                                   

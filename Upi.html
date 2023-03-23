@@ -1,0 +1,78 @@
+<html>
+<style>
+body{
+background-image:url('4.jpg');
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: Red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #657383;
+}
+</style>
+
+<Center>
+<h1>
+BHIM UPI Payment mode:
+</h1>
+<form action=" ">
+Enter Amount:<input type="text" name="Enter id" required value=""><br><br>
+Enter UPI ID:<input type="text" name="Enter id" required value=""><br><br>
+<script>
+function myFunction() {
+  alert(" Your Booking is confirmed");
+}
+</script>
+<div onClick="myFunction()">
+<input type="submit" name="submitPayment" class="button" id="submitPayment" value="MakePayment" />  
+</div>
+</center>
+</form>
+
+<?php
+ 
+session_start();
+date_default_timezone_set("Asia/calcutta");
+$now = time();
+if($now > $_SESSION['expire'])
+ {
+
+        session_destroy();
+		echo "<p align='center'>Your session has expire ! <a href='login.php'>Login Here</a></p>";
+
+
+}
+else{
+header("Location: /Upi.html");
+}
+?>
+</html>
